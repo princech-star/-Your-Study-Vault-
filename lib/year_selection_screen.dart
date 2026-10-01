@@ -1,0 +1,60 @@
+import 'year_subjects_screen.dart';
+import 'package:flutter/material.dart';
+
+class YearSelectionScreen extends StatelessWidget {
+  const YearSelectionScreen({super.key});
+
+    @override
+      Widget build(BuildContext context) {
+          final years = [
+                '1st Year',
+                      '2nd Year',
+                            '3rd Year',
+                                  '4th Year',
+                                      ];
+
+                                          return Scaffold(
+                                                appBar: AppBar(
+                                                        title: const Text('Select Year'),
+                                                              ),
+                                                                    body: Padding(
+                                                                            padding: const EdgeInsets.all(20),
+                                                                                    child: Column(
+                                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                        children: [
+                                                                                                                    const Text(
+                                                                                                                                  'Choose Your Year',
+                                                                                                                                                style: TextStyle(
+                                                                                                                                                                fontSize: 26,
+                                                                                                                                                                                fontWeight: FontWeight.bold,
+                                                                                                                                                                                              ),
+                                                                                                                                                                                                          ),
+                                                                                                                                                                                                                      const SizedBox(height: 20),
+                                                                                                                                                                                                                                  ...years.map(
+                                                                                                                                                                                                                                                (year) => Card(
+                                                                                                                                                                                                                                                                child: ListTile(
+                                                                                                                                                                                                                                                                                  leading: const Icon(Icons.school),
+                                                                                                                                                                                                                                                                                                    title: Text(
+                                                                                                                                                                                                                                                                                                                        year,
+                                                                                                                                                                                                                                                                                                                                            style: const TextStyle(
+                                                                                                                                                                                                                                                                                                                                                                  fontSize: 18,
+                                                                                                                                                                                                                                                                                                                                                                                        fontWeight: FontWeight.bold,
+                                                                                                                                                                                                                                                                                                                                                                                                            ),
+                                                                                                                                                                                                                                                                                                                                                                                                                              ),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                trailing: const Icon(Icons.arrow_forward_ios),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  onTap: () {Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => YearSubjectsScreen(year: year),
+    ),
+  );
+  },
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ],
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }

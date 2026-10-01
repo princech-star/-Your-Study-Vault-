@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'year_selection_screen.dart';
 
 void main() {
   runApp(const YourStudyVault());
@@ -198,28 +199,28 @@ class DashboardScreen extends StatelessWidget {
                 icon: Icons.search,
                 title: 'Search Notes',
                 subtitle: 'Find notes by subject and unit',
-                onTap: () {},
+                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => const YearSelectionScreen())); },
               ),
 
               _MenuCard(
                 icon: Icons.bookmark,
                 title: 'Saved Notes',
                 subtitle: 'Your bookmarked notes',
-                onTap: () {},
+                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => const YearSelectionScreen())); },
               ),
             ] else ...[
               _MenuCard(
                 icon: Icons.upload_file,
                 title: 'Upload Notes',
                 subtitle: 'Upload your handwritten notes',
-                onTap: () {},
+                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => const YearSelectionScreen())); },
               ),
 
               _MenuCard(
                 icon: Icons.edit_document,
                 title: 'My Notes',
                 subtitle: 'Edit your uploaded notes',
-                onTap: () {},
+                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => const YearSelectionScreen())); },
               ),
             ],
           ],
